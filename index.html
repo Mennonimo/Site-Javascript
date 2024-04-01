@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos javascript</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="fundo">
+
+    <div class="Menus" id="menus" onmouseleave="voltar()">
+        <div class="categorias" id="categorias">
+            <div class="linkando">
+                <div class="margem">
+                <a href="index.html" >Introdução</a><br>
+                <a href="Categorias/variavel.html">Variaveis</a><br>
+                <a href="Categorias/escrita.html">Escrita</a><br>
+                <a href="Categorias/operacoes.html">Operações</a><br>
+                <a href="Categorias/estrutura.html">Estrutura condicional</a><br>
+                <a href="Categorias/repeticao.html">Repetição</a><br>
+                <a href="Categorias/outros.html">Outros Conceitos</a><br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cima">
+            <div class="navbar">
+
+                <button class="menu" id="botao" onclick="ir()">
+                    <span class="barra" id="barra1"></span>
+                    <span class="barra" id="barra2"></span>
+                    <span class="barra" id="barra3"></span>
+                </button> 
+
+                <div class="titulo">Javascript</div>
+
+                <div class="links">
+                    <div class="home"><a href="index.html">Home</a></div>
+                    <a href="Navbar/baixar.html">Baixar</a>
+                    <a href="Navbar/sobre.html">Sobre</a>
+                    <a href="Navbar/autor.html">Autor</a>
+                </div>
+            </div>
+            <div class="ativador"></div>
+        </div>
+    </div>
+
+    <div class="imagem">
+        <img src="imagens/index/Javascript-background.jpg" alt="">
+        <div class="invisivel"></div>
+    </div>
+    
+    <div class="linha"></div>
+    
+    <main class="conteudo">
+            <div class="texto">
+                <div class="titulo2"><h1>Introdução</h1></div>
+                <p>Em primeira mão usaremos o Vscode como ferramenta podendo ser baixado assim:</p>
+
+                <p>Usaremos a biblioteca de Node.js para conseguir executar códigos Javascript no terminal do Vscode</p>
+                    
+                <p>Usaremos uma extensão para executar códigos de Javascript e auxiliar nos códigos:</p>
+                <p>Baixe os programas aqui: <a href="Navbar/baixar.html">Baixar Programas</a></p>
+                <div class="contimagem">
+                <img src="imagens/index/Icone de javascript.png" alt="" width="50%">
+                </div>
+                <br>
+                <div class="titulo2"><h1>Chamando o Javascript</h1></div>    
+                <p>Há duas maneiras principais de para chamar um arquivo Javascript em um arquivo html.</p>
+
+                <p>A primeira forma é dentro do código, mais específico dentro da tag &lt;body&gt; chamar a tag &lt;script&gt; &lt;/script&gt; dentro dessa tag é possível de se escrever na linguagem Javascript e interagir direto no código html ao mesmo tempo.</p>
+
+                <p>A segunda maneira e recomendada é criar um arquivo Javascript (&lt;”nome que você quiser”&gt;.js) e dentro do arquivo .html você chamar pelo arquivo Javascript (.js). Para chamar basta colocar a tag &lt;/script&gt; e escrever:</p>
+                <div class="prints">
+                <img src="imagens/Linhas de código/Chamando-javascript1.png" alt="">
+                </div>
+                <p>O recomendado é você chamar dentro da tag &lt;head&gt;, mas é possível chamar pela tag &lt;body&gt; também, mas não é aconselhavel</p>
+        </main>
+</body>
+</html>

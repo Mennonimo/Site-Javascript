@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repetição</title>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fundo">
+
+    <div class="Menus" id="menus" onmouseleave="voltar()">
+        <div class="categorias" id="categorias">
+            <div class="linkando">
+                <div class="margem">
+                <a href="../index.html" >Introdução</a><br>
+                <a href="variavel.html">Variaveis</a><br>
+                <a href="escrita.html">Escrita</a><br>
+                <a href="operacoes.html">Operações</a><br>
+                <a href="estrutura.html">Estrutura condicional</a><br>
+                <a href="repeticao.html">Repetição</a><br>
+                <a href="outros.html">Outros Conceitos</a><br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cima">
+            <div class="navbar">
+
+                <button class="menu" id="botao" onclick="ir()">
+                    <span class="barra" id="barra1"></span>
+                    <span class="barra" id="barra2"></span>
+                    <span class="barra" id="barra3"></span>
+                </button> 
+
+                <div class="titulo">Javascript</div>
+
+                <div class="links">
+                    <div class="home"><a href="../index.html">Home</a></div>
+                    <a href="../Navbar/baixar.html">Baixar</a>
+                    <a href="../Navbar/sobre.html">Sobre</a>
+                    <a href="../Navbar/autor.html">Autor</a>
+                </div>
+            </div>
+            <div class="ativador"></div>
+        </div>
+    </div>
+
+    <div class="imagem">
+        <img src="../imagens/index/Javascript-background.jpg" alt="">
+        <div class="invisivel"></div>
+    </div>
+    
+    <div class="linha"></div>
+    
+    <main class="conteudo">
+            <div class="texto">
+                <div class="titulo2"><h1>Estrutura de Repetição</h1></div>
+                <p>O sistema de repetição é usado normalmente com uma variável onde ele executa um comando escrito até que uma condição tenha sido atendida. O while (Enqunato) é muito usado para criar repetições simples. Um exemplo de seu uso seria:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Estrutura While.png" alt="">
+                </div>
+                <p>Nesse comando o while está dizendo, enquanto a contador for menor ou igual a 10, ele irá repetir o comando.</p>
+                <p>Na parte de comando possui um <i>"document.write"</i> que está revelando o valor do contador então enquanto o contador for menor ou igual a 10 ele irá repetir o valor da variável.</p>
+                <p>No contador++ é uma propriedade de adição, também possui de subtração e a regra é a seguinte:</p>
+                <p>Como modelo: <strong><i>var num = 5;</i></strong></p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Acrementar antes.png" alt="">
+                </div>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Acrementar depois.png" alt="">
+                </div>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/decrementar antes.png" alt="">
+                </div>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/decrementar depois.png" alt="">
+                </div>
+                <p>Existe também uma outra lista de tipos de operadores que são muito uteis para quando for usar por exemplo o <strong><i>for</i></strong> e estes seriam:</p>
+                <p>Tendo como variável <Strong>X</Strong>:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/atribuição soma.png" alt="">
+                </div>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/atribuição subtração.png" alt="">
+                </div>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/atribuição multiplicação.png" alt="">
+                </div>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/atribuição divisão.png" alt="">
+                </div>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/atribuição resto.png" alt="">
+                </div>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/atribuição potencianção.png" alt="">
+                </div>
+                <div class="titulo2"><h1>For</h1></div>
+                <p>O for é while só que escrito de uma forma diferente, for é usado por iteração, então dentro dele é criado uma variável que normalmente possui como nome: “i”</p>
+                <p>Como exemplo se segue:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/for.png" alt="">
+                </div>
+                <p>No código acima está especificando que o i irá começar do número 1 ‘(i = 1)’ e enquanto ele for menor que 10 '(i &lt; 10)' ele repetira o comando e o i++ é que a cada iteração ou a cada vez que ele executar os comandos das chaves ele irá adicionar +1 depois de imprimir.</p>
+                <p>Teste seu próprio i</p>
+                <div class="repeticao">
+                    <div class="Crepetir">
+                        <label for="forin">for ( i=1; i&lt;</label>
+                            <input type="number" class="forin" id="forin" oninput="TFor()">                        
+                        <label for="forin">; i ++) { </label><br>
+                        <label for="forin">document.write(i);</label>
+                        <label for="forin">}</label>
+                    </div>
+                    <label for="forin" class="alertando" id="alertando"></label>
+                    <div class="botaoFor">
+                        <button onclick="repetir()">Iniciar Repetição</button>
+                    </div>
+                    <p class="resultadoFor" id="resultadoFor"></p>
+                </div>
+                <div class="titulo2"><h1>Do while</h1></div>
+                <p>O <i>do while</i> é usado da seguinte forma, é como uma junção do while com o for. Por exemplo fica:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Do while.png" alt="">
+                </div>
+                <p>No código acima primeiro é declarado uma variável que representa o número de iterações que terá ou quantas vezes o comando será repetido. Começamos com o “do” e abrimos chaves e dentro das chaves escolhemos o código que queremos que repita. Nesse caso foi escolhido que a cada iteração será falado o número de qual iteração estamos (i). Logo depois foi colocado o i++ para que adcione 1 pra cada iteração. Depois de fechar as chaves do “do” nós usamos o while para decidir quantas vezes vamos repetir o nosso comando, nesse caso ele irá repetir até que o i seja igual ou maior que 15, em outras palavras, irá repetir enquanto o i for menor que 15 ( i &lt; 15)</p>
+        </main>
+</body>
+</html>

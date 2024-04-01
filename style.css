@@ -1,0 +1,572 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-image: url(imagens/index/Prancheta1@4x.png);
+    background-size: 50vw;
+    background-repeat: repeat;
+}
+.cima {
+    margin-top: -10vh;
+    transition: margin-top 0.5s;
+}
+ .navbar {
+    background-image: linear-gradient(135deg, rgb(41, 41, 41) 45%, rgb(255, 251, 0) 45%);
+    width: 100vw;
+    height: 10vh;
+    margin-top: 0;
+    z-index: 2;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 15px solid;
+    border-color: rgb(255,123,0);
+}
+
+/*Menu com o botão de 3 barras*/
+.menu {
+    background-color: transparent;
+    width: 3.5vw;
+    height: 7vh;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin: 1%;
+    justify-content: space-evenly;
+    transition: transform 0.5s ease;
+}
+span {
+    width: 3vw;
+    height: 0.3vh;
+    background-color: white;
+    display: flex;
+    border-radius: 2px;
+    transition: background-color 0.5s ease;
+}
+.navbar button{
+    border: none;
+}
+.menu:hover span {
+    background-color: rgb(255, 251, 0);
+}
+
+/*Animações do navbar menu e etc...*/
+@keyframes largura-inicial{
+    0% { height: 0.3vh;}
+    100% { height: 0.5vh;}
+}
+
+@keyframes largura-final{
+    0% { height: 0.5vh}
+    100% { height: 0.3vh}
+}
+
+@keyframes flexe {
+    0% { gap: 0px;}
+    100% { gap: 1vw;}
+}
+
+@keyframes reflexe {
+    0% { gap: 1vw;}
+    100% { gap: 0px;}
+}
+
+@keyframes girar-menu {
+    0% { rotate: 0;}
+    100% { rotate: 90deg;}
+}
+@keyframes regirar-menu {
+    0% { rotate: 90deg;}
+    100% { rotate: 0;}
+}
+@keyframes borda-inicial {
+    0% { border-right-width: 0px;}
+    100% { border-right-width: 7px;}
+}
+@keyframes borda-final {
+    0% { border-right-width: 7px;}
+    100% { border-right-width: 0px;}
+}
+
+
+.categorias {
+    position: fixed;
+    top: 10vh;
+    width: 18vw;
+    height: 90vh;
+    margin-left: -18vw;
+    background-color: rgb(30, 30, 30);
+    z-index: 9;
+    border-right: 0px solid rgb(255,251,0);
+}
+.categorias:hover + .cima {
+    margin-top: 0;
+}
+.categorias:hover + .ativador {
+    height: 0;
+}
+
+@keyframes aparecer-categoria {
+    0% { margin-left: -18vw;}
+    100% { margin-left: 0;}
+}
+@keyframes desaparecer-categoria {
+    0% { margin-left: 0;}
+    100% { margin-left: -18vw;}
+}
+
+.linkando {
+    width: 100%;
+    height: 100%;
+    margin: 10%;
+}
+.linkando a {
+    position: relative;
+    color: white;
+    font-family: arial;
+    font-size: 1.2vw;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 3vh;
+}
+.linkando a::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0.2vh;
+    bottom: 0;
+    left: 0;
+    background-color: yellow;
+    visibility: hidden;
+    transform-origin: left;
+    transition: all 0.3s ease-in-out 0s;
+}
+.linkando a:hover::before {
+    visibility: visible;
+    width: 100%;
+}
+/*Outros itens da navbar*/
+
+.titulo {
+    position: absolute;
+    margin-left: 12.5%;
+    color: white;
+    font-family: arial;
+    font-size: 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    width: 100vw;
+    height: 10vh;
+}
+.links {
+    margin-left: 45%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    z-index: 7;
+}
+.links a {
+    color: black;
+    font-family: arial;
+    font-weight: bold;
+    font-size: 40px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+.links a:hover {
+    color: rgb(255, 123, 0);
+}
+.ativador {
+    width: 100vw;
+    height: 10vh;
+    position: fixed;
+    margin-top: 10vh;
+    z-index: 3;
+    transition: top 0.5s ease, height 0.5s ease;
+}
+.cima:hover {
+    margin-top: 0;
+}
+.cima:hover .ativador {
+    height: 0;
+}
+
+/*Imagem*/
+.imagem img{
+    width: 100vw;
+    height: 40vh;
+    object-fit: cover;
+}
+.imagem {
+    top: 0;
+    position: absolute;
+    z-index: 0;
+}
+.invisivel {
+    position: absolute;
+    background-color: black;
+    width: 100vw;
+    height: 40vh;
+    z-index: 1;
+    top: 0px;
+    opacity: 50%;
+}
+.linha {
+    background-color: rgb(255, 251, 0);
+    width: 100vw;
+    height: 6px;
+    position: absolute;
+    top: 40vh;
+    z-index: 1;
+}
+
+/*Parte do conteudo ou main*/
+
+.conteudo {
+    position: absolute;
+    width: 64vw;
+    height: auto;
+    margin-left: 18vw;
+    margin-right: 18vw;
+    border-left: solid 5px rgb(255,251,0);
+    border-right: solid 5px rgb(255,251,0);
+    border-bottom: solid 5px rgb(30,30,30);
+    top: 40vh;
+    overflow-wrap: break-word;
+    background-color: white;
+}
+.texto {
+    margin: 2vw;
+}
+.titulo2 {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+}
+.texto h1 {
+    color: black;
+    font-family: arial;
+    text-align: center;
+    font-weight: bold;
+    font-size: 100px;
+    border-left: 5px rgb(255, 251, 0) solid;
+    display: inline-block;
+    justify-content: center;
+    padding-left: 10px;
+}
+.texto {
+    page-break-before: always;
+}
+.texto p {
+    font-family: arial;
+    font-size: 30px;
+    overflow-wrap: break-word;
+}
+.contimagem {
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.contimagem img {
+width: 500px;
+}
+.prints {
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+}
+.prints img {
+width: 800px;
+height: auto;
+border: rgb(255,200,0) solid 5px;
+}
+.observacao p {
+    color: gray;
+    font-weight: bold;
+}
+.italico {
+    font-weight: bold;
+    font-style: italic;
+}
+label {
+    font-family: arial;
+    font-size: 35px;
+    color: white;
+    font-weight: bold;
+}
+.testarcomando {
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    background-color: rgb(30,30,30);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: solid 7px rgb(255, 153, 0);
+    border-radius: 10px;
+}
+.comandos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4%;
+}
+.textousuario {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4%;
+    margin-right: 4%;
+    color: yellow;
+    font-size: 20px;
+    font-family: arial;
+    font-style: italic;
+    display: block;
+    margin-top: 10px;
+}
+.testedeusuario {
+    width: 50px;
+    height: 35px;
+    font-size: 35px;
+    font-family: arial;
+    min-width: 50px;
+    max-width: 40vw;
+}
+.inputAlert {
+    width: 50px;
+    height: 35px;
+    font-size: 35px;
+    font-family: arial;
+    min-width: 50px;
+    max-width: 40vw;
+}
+.butaoalert button {
+    background-color: rgb(30, 30, 30);
+    border: solid 5px yellow;
+    font-family: arial;
+    font-size: 25px;
+    border-radius: 5px;
+    color: white;
+    height: 100px;
+    max-width: 200px;
+    font-weight: bold;
+    transition: all 0.5s ease;
+}
+.butaoalert button:hover {
+    color: black;
+    background-color: white;
+    border-color: red;
+}
+.butaoalert {
+    text-align: center;
+}
+.testarcomando2 {
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    background-color: rgb(30,30,30);
+    border: 7px solid rgb(255, 123, 0);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.comandos2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 4%;
+    margin-right: 4%;
+    align-items: center;
+    margin-top: 10px;
+}
+.butaoenviar button {
+    background-color: rgb(30,30,30);
+    border: 5px solid yellow;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+    width: 100px;
+    max-height: 100px;
+    transition: all 0.5s ease;
+}
+.butaoenviar {
+    text-align: center;
+}
+.butaoenviar button:hover {
+    color: black;
+    background-color: white;
+    border-color: red;
+}
+.calculadora {
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    background-color: rgb(30,30,30);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: solid 7px rgb(255, 153, 0);
+    border-radius: 10px;
+}
+.calcComandos {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4%;
+    margin-top: 2%;
+}
+.calcComandos2 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4%;
+}
+.calculo {
+    width: 50px;
+    height: 35px;
+    font-size: 35px;
+    font-family: arial;
+    min-width: 50px;
+    max-width: 28vw;
+}
+.calculo2 {
+    width: 50px;
+    height: 35px;
+    font-size: 35px;
+    font-family: arial;
+    min-width: 50px;
+    max-width: 28vw;
+}
+.textoCalculadora {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4%;
+    margin-right: 4%;
+    display: block;
+    margin-top: 10px;
+}
+.textoCalculadora h6 {
+    color: white;
+    font-size: 20px;
+    font-family: arial;
+    font-style: italic;
+}
+.botoesCal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+.butaoCalculadora button {
+    background-color: rgb(30,30,30);
+    border: 5px solid yellow;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+    width: 160px;
+    height: 60px;
+    transition: all 0.5s ease;
+}
+.butaoCalculadora {
+    text-align: center;
+}
+.butaoCalculadora button:hover {
+    color: black;
+    background-color: white;
+    border-color: red;
+}
+.reFaz button {
+    background-color: rgb(30,30,30);
+    border: 5px solid yellow;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+    width: 160px;
+    height: 60px;
+    transition: all 0.5s ease;
+}
+.reFaz {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.reFaz button:hover {
+    color: black;
+    background-color: white;
+    border-color: red;
+}
+
+/*Estrutura de Repetição For*/
+
+.repeticao {
+    width: 100%;
+    min-height: 150px;
+    height: auto;
+    background-color: rgb(30,30,30);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: solid 7px rgb(255, 153, 0);
+    border-radius: 10px;
+}
+.Crepetir {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 4%;
+}
+.botaoFor button {
+    background-color: rgb(30,30,30);
+    border: 5px solid yellow;
+    border-radius: 7px;
+    font-size: 20px;
+    color: white;
+    width: 150px;
+    max-height: 150px;
+    transition: all 0.5s ease;
+}
+.botaoFor {
+    text-align: center;
+}
+.botaoFor button:hover {
+    color: black;
+    background-color: white;
+    border-color: red;
+}
+.forin {
+    width: 50px;
+    height: 35px;
+    font-size: 35px;
+    font-family: arial;
+    min-width: 50px;
+    max-width: 40vw;
+}
+.alertando {
+    color: rgb(255, 123, 0);
+    margin-left: 4%;
+}
+.resultadoFor {
+    color: white;
+    margin-left: 4%;
+    margin-right: 4%;
+}

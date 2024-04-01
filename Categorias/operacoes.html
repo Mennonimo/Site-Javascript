@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis e Tipos de Variáveis</title>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fundo">
+
+    <div class="Menus" id="menus" onmouseleave="voltar()">
+        <div class="categorias" id="categorias">
+            <div class="linkando">
+                <div class="margem">
+                <a href="../index.html" >Introdução</a><br>
+                <a href="variavel.html">Variaveis</a><br>
+                <a href="escrita.html">Escrita</a><br>
+                <a href="operacoes.html">Operações</a><br>
+                <a href="estrutura.html">Estrutura condicional</a><br>
+                <a href="repeticao.html">Repetição</a><br>
+                <a href="outros.html">Outros Conceitos</a><br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cima">
+            <div class="navbar">
+
+                <button class="menu" id="botao" onclick="ir()">
+                    <span class="barra" id="barra1"></span>
+                    <span class="barra" id="barra2"></span>
+                    <span class="barra" id="barra3"></span>
+                </button> 
+
+                <div class="titulo">Javascript</div>
+
+                <div class="links">
+                    <div class="home"><a href="../index.html">Home</a></div>
+                    <a href="../Navbar/baixar.html">Baixar</a>
+                    <a href="../Navbar/sobre.html">Sobre</a>
+                    <a href="../Navbar/autor.html">Autor</a>
+                </div>
+            </div>
+            <div class="ativador"></div>
+        </div>
+    </div>
+
+    <div class="imagem">
+        <img src="../imagens/index/Javascript-background.jpg" alt="">
+        <div class="invisivel"></div>
+    </div>
+    
+    <div class="linha"></div>
+    
+    <main class="conteudo">
+            <div class="texto">
+                <div class="titulo2"><h1>Operações Aritméticas</h1></div>
+                <p>Uma coisa importante são os operadores no Javascript no caso as operações aritméticas dentro do Javascript sendo elas representadas por símbolos para fazer os cálculos de números. Segue uma lista com o símbolo que representa cada operação aritmética no Javascript:</p>
+                <p>soma = “<strong>+</strong>”</p>
+                <p>subtração = "<strong>-</strong>"</p>
+                <p>Multiplicação = “<strong>*</strong>”</p>
+                <p>divisão = “<strong>/</strong>"</p>
+                <p>Exponenciação = “<strong>**</strong>”</p>
+                <p>Resto da divisão = “<strong>%</strong>”</p>
+                <p>(Nesse caso ele retorna o resto inteiro da divisão, logo ele tira o decimal e retorna somente o número inteiro.)</p>
+                <p>Ele pode ser atribuído a variáveis como por exemplo:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Variável de soma.png" alt="">
+                </div>
+                <p>Nesse caso a variável ‘soma’ terá o valor do resultado da soma que é 24. As operações só funcionam com números inteiros ou decimais, caso tente fazer uma operação como uma variável de texto ele fará um ajuntamento de texto, vamos falar sobre soma de variáveis e conteúdos agora.</p>
+                <p>Para escrever um texto e uma variável juntos como no document.write é usado o símbolo de soma(+) ou o ponto(.) ficando como exemplo assim:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Var mais document.png" alt="">
+                </div>
+                <p>Como pode se ver oque está em aspas é o texto e o ‘nome’ é a variável e para juntar elas é usado o ‘+’ e de saída fica:</p>
+                <p class="italico">Oi, meu nome é: Arthur</p>
+                <p>Vamos testar um recurso, Teste a calculadora a baixo:</p>
+                <div class="calculadora">
+                    <div class="calcComandos">
+                        <label for="calculo">Escolha o primeiro número</label>
+                        <input type="number" class="calculo" id="calculo" oninput="mudarCalculadora()">
+                    </div>
+                    <div class="calcComandos">
+                        <label for="calculo2">Escolha o segundo número</label>
+                        <input type="number" class="calculo2" id="calculo2" oninput="mudarCalculadora2()">
+                    </div>
+                    <br>
+                    <div class="botoesCal">
+                        <div class="butaoCalculadora">
+                            <button onclick="somaCalculo()">Soma</button>
+                            <button onclick="subtracaoCalculo()">Subtração</button>
+                            <button onclick="multiplicacaoCalculo()">Multiplicação</button>
+                            <button onclick="divisaoCalculo()">Divisão</button>
+                            <button onclick="restoCalculo()">Resto</button>
+                            <button onclick="elevarCalculo()">Elevar</button>
+                        </div>
+                    </div>
+                    <p class="textoCalculadora" id="textoCalculadora"></p>
+                </div>
+        </main>
+</body>
+</html>

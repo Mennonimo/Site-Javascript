@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis e Tipos de Variáveis</title>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fundo">
+
+    <div class="Menus" id="menus" onmouseleave="voltar()">
+        <div class="categorias" id="categorias">
+            <div class="linkando">
+                <div class="margem">
+                <a href="../index.html" >Introdução</a><br>
+                <a href="variavel.html">Variaveis</a><br>
+                <a href="escrita.html">Escrita</a><br>
+                <a href="operacoes.html">Operações</a><br>
+                <a href="estrutura.html">Estrutura condicional</a><br>
+                <a href="repeticao.html">Repetição</a><br>
+                <a href="outros.html">Outros Conceitos</a><br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cima">
+            <div class="navbar">
+
+                <button class="menu" id="botao" onclick="ir()">
+                    <span class="barra" id="barra1"></span>
+                    <span class="barra" id="barra2"></span>
+                    <span class="barra" id="barra3"></span>
+                </button> 
+
+                <div class="titulo">Javascript</div>
+
+                <div class="links">
+                    <div class="home"><a href="../index.html">Home</a></div>
+                    <a href="../Navbar/baixar.html">Baixar</a>
+                    <a href="../Navbar/sobre.html">Sobre</a>
+                    <a href="../Navbar/autor.html">Autor</a>
+                </div>
+            </div>
+            <div class="ativador"></div>
+        </div>
+    </div>
+
+    <div class="imagem">
+        <img src="../imagens/index/Javascript-background.jpg" alt="">
+        <div class="invisivel"></div>
+    </div>
+    
+    <div class="linha"></div>
+    
+    <main class="conteudo">
+            <div class="texto">
+                <div class="titulo2"><h1>Escrevendo no Documento</h1></div>
+                <p>Nessa parte vamos aprender a escrever e interagir na página usando algumas funções do Javascript.</p>
+                <p>A primeira função é o document.write que em código funciona assim:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Escrever no documento.png" alt="">
+                </div>
+                <p>Nesse comando ele escreve dentro do arquivo html tudo que está dentro do parênteses, e nesse caso é possível chamar variáveis também como:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Exemplo de write.png" alt="">
+                </div>
+                <p>Nesse caso a saída na página deve ser: “Arthur”</p>
+                <p>experimente escrever uma frase dentro desse quadrado abaixo:</p>
+                
+                <div class="testarcomando">
+                    <div class="comandos">
+                        <label for="testedeusuario">document.write("</label>
+                        <input type="text" class="testedeusuario" id="testedeusuario" oninput="mudarinput()" onblur="escrevercomando()">
+                        
+                        <label for="testedeusuario">)";</label>
+                    </div>
+                    <p class="textousuario" id="textousuario"></p>
+                </div>
+
+                <p>Outra forma é usando o alert que escreve uma mensagem em uma caixa de pop up em cima no navegador.</p>
+                <p>Um exemplo do código seria:</p>
+
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/alert.png" alt="">
+                </div>
+
+                <div class="butaoalert">
+                <button onclick="alerta()">Clique Aqui para ativar o alert</button>
+                </div>
+
+                <p>Ele também funciona com variáveis. Experimente digitar uma frase abaixo e ativar um alert:</p>
+                <div class="testarcomando2">
+                    <div class="comandos2">
+                        <label for="inputAlert">alert("</label>
+                        <input type="text" class="inputAlert" id="inputAlert" oninput="mudarAlert()">
+                        <label for="inputAlert">");</label>
+                        <p class="textodeconsole" id="textodeconsole"></p>
+                    </div>
+                    <div class="butaoenviar">
+                        <button onclick="enviaralert()">Enviar</button>
+                    </div>
+                </div>
+                <div class="observacao">
+                    <p>OBS: dentro dos textos no Javascript é possível escrever tags de html, então em um document.write você pode usar por exemplo se quiser uma tag br (&lt;br&gt;) e entre outras também e até divs.</p>
+                </div>
+        </main>
+</body>
+</html>

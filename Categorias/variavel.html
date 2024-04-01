@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variaveis e Tipos de Variáveis</title>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fundo">
+
+    <div class="Menus" id="menus" onmouseleave="voltar()">
+        <div class="categorias" id="categorias">
+            <div class="linkando">
+                <div class="margem">
+                <a href="../index.html" >Introdução</a><br>
+                <a href="variavel.html">Variaveis</a><br>
+                <a href="escrita.html">Escrita</a><br>
+                <a href="operacoes.html">Operações</a><br>
+                <a href="estrutura.html">Estrutura condicional</a><br>
+                <a href="repeticao.html">Repetição</a><br>
+                <a href="outros.html">Outros Conceitos</a><br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cima">
+            <div class="navbar">
+
+                <button class="menu" id="botao" onclick="ir()">
+                    <span class="barra" id="barra1"></span>
+                    <span class="barra" id="barra2"></span>
+                    <span class="barra" id="barra3"></span>
+                </button> 
+
+                <div class="titulo">Javascript</div>
+
+                <div class="links">
+                    <div class="home"><a href="../index.html">Home</a></div>
+                    <a href="../Navbar/baixar.html">Baixar</a>
+                    <a href="../Navbar/sobre.html">Sobre</a>
+                    <a href="../Navbar/autor.html">Autor</a>
+                </div>
+            </div>
+            <div class="ativador"></div>
+        </div>
+    </div>
+
+    <div class="imagem">
+        <img src="../imagens/index/Javascript-background.jpg" alt="">
+        <div class="invisivel"></div>
+    </div>
+    
+    <div class="linha"></div>
+    
+    <main class="conteudo">
+            <div class="texto">
+                <div class="titulo2"><h1>Variáveis</h1></div>
+                <p>A primeira coisa que vamos aprender são as variáveis no Javascript:</p>
+                <p>variáveis podem ser escritas dá seguinte forma:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Eu sou uma variável.png" alt=""> 
+                </div>
+                <p>Nesse exemplo começamos com “var” para identificar que queremos criar uma variável e logo após colocamos o nome da variável.</p>
+                <p>No “=” serve para decidir qual será o valor da variável. Nesse caso o valor é: “eu sou uma variável”, sendo do tipo texto.</p>
+                <p>No Javascript tem se o costume de finalizar uma linha de código usando o ponto e vírgula (;). Embora é usado dessa forma hoje em dia não é necessário o uso de ponto e vírgula para finalizar o código, mas caso use é importante continuar a usar até o final do código. O uso do ponto e vírgula é um bom costume devido a outras linguagens possuírem essa característica.</p>
+                <p>Percebe-se no Javascript que a linguagem não é necessário especificar o tipo da variável, com ele interpretando automaticamente o tipo de variável que é com base no valor.</p>
+                <p>Os tipos de variável nele seriam:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Tipos de variável.png" alt="">
+                </div>
+                <p>Um caso interessante é:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/variavel string de número.png
+                    " alt="">
+                </div>
+                <p>Nesse caso em específico mesmo sendo um número descrito na variável, as aspas refletem a característica de string então oque está dentro de uma aspas independente acaba se transformando em um texto e não numérico, float ou boolean.</p>
+                <div class="observacao">
+                    <p>OBS: “//” é usado para tirar qualquer valor que estiver após as barras, virando assim um comentário, uma descrição ou qualquer anotação que não tenha uma função lógica dentro do código, praticamente um fantasma.</p>
+                </div>
+        </main>
+</body>
+</html>

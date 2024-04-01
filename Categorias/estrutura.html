@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estrutura Condicional</title>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fundo">
+
+    <div class="Menus" id="menus" onmouseleave="voltar()">
+        <div class="categorias" id="categorias">
+            <div class="linkando">
+                <div class="margem">
+                <a href="../index.html" >Introdução</a><br>
+                <a href="variavel.html">Variaveis</a><br>
+                <a href="escrita.html">Escrita</a><br>
+                <a href="operacoes.html">Operações</a><br>
+                <a href="estrutura.html">Estrutura condicional</a><br>
+                <a href="repeticao.html">Repetição</a><br>
+                <a href="outros.html">Outros Conceitos</a><br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cima">
+            <div class="navbar">
+
+                <button class="menu" id="botao" onclick="ir()">
+                    <span class="barra" id="barra1"></span>
+                    <span class="barra" id="barra2"></span>
+                    <span class="barra" id="barra3"></span>
+                </button> 
+
+                <div class="titulo">Javascript</div>
+
+                <div class="links">
+                    <div class="home"><a href="../index.html">Home</a></div>
+                    <a href="../Navbar/baixar.html">Baixar</a>
+                    <a href="../Navbar/sobre.html">Sobre</a>
+                    <a href="../Navbar/autor.html">Autor</a>
+                </div>
+            </div>
+            <div class="ativador"></div>
+        </div>
+    </div>
+
+    <div class="imagem">
+        <img src="../imagens/index/Javascript-background.jpg" alt="">
+        <div class="invisivel"></div>
+    </div>
+    
+    <div class="linha"></div>
+    
+    <main class="conteudo">
+            <div class="texto">
+                <div class="titulo2"><h1>Estrutura Condicional</h1></div>
+                <p>Como a maioria das linguagens o IF é usado para pôr condições e no Javascript não é diferente sendo usado da seguinte forma:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Exemplo de If.png" alt="">
+                </div>
+                <p>Na linha de código alí em cima é usado o if e logo após é usado os parênteses.</p>
+                <p>Tudo dentro dos parênteses é a condição que se for verdadeira, nesse caso o nome sendo igual a Arthur. É acionado os comandos dentro do primeiro par de chaves <i>'{}'</i>, nesse caso sendo o:</p> 
+                <div class="italico"><p>document.write(“O nome é Arthur”);</p></div>
+                <p>Depois que fecha chaves é possível usar o ‘else’ que é usado para caso a condição for falsa, ou seja, se o nome não for igual a Arthur. Também segue com a mesma lógica das chaves no else (<i>else {"linha de comando"}</i>).</p>
+                <p>Algo importante de se mencionar são os espaços quando se usa um if, os comandos que serão acionados com a condição eles acabam indo para um espaço à frente do if como no exemplo abaixo:</p>
+                <hr>
+                <p>Isso existe em varias linguagens de programação e também é comum no Javascript</p>
+                <p>A lista de operadores de comparação segue abaixo:</p>
+                <p><strong>modelo:</strong></p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Exp If.png" alt="">
+                </div>
+                <p>Se A for igual a B: if (A == B)</p>
+                <p>Se A for igual em valor e do tipo da variável B: if (A === B)</p>
+                <p>Se A for menor que B: if (A &lt; B)</p>
+                <p>Se A for maior que B: if (A > B)</p>
+                <p>Se A for maior ou igual a B: if (A >= B)</p>
+                <p>Se A for menor ou igual a B: if (A &lt;= B)</p>
+                <p>Se A for diferente de B: if (A != B)</p>
+                <p>Se A for diferente em valor e do mesmo tipo da variável B: if (A !== B)</p>
+                <br>
+                <p>O ‘=’ é diferente de ‘==’, o primeiro é de atribuição, como A ganha o valor de B o segundo está comparando para saber se é verdadeiro ou falso (A é igual a B?).</p>
+                <p>É possível fazer múltiplas condições usando alguns outros operadores para comparação dentro dos parênteses e esses seriam o <strong>E</strong>, <strong>OU</strong> e <strong>OPOSTO</strong>. Em prática é usado símbolos, segue a lista:</p>
+                <p>Considerando: </p><div class="italico"><p>A = “Arthur”, B = “Arthur”</p></div>
+                <div class="italico"><p>E = ‘&&’  Se todas as condições escritas forem verdadeiras.</p></div>
+                <p>if (A == B && A ===B)</p>
+                <p>Como saída será verdadeiro.</p>
+                <hr>
+                <div class="italico"><p>OU = ‘||’ Se pelo menos uma das condições forem verdadeiras</p></div>
+                <p>if (A > B || A &lt; B)</p>
+                <p>Como saída será falso pois não são números para serem maiores ou menores em valores, logo não é comparável se é maior ou menor.</p>
+        </main>
+</body>
+</html>

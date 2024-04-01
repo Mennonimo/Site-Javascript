@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Outros Conceitos</title>
+    <script src="../script.js"></script>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body class="fundo">
+
+    <div class="Menus" id="menus" onmouseleave="voltar()">
+        <div class="categorias" id="categorias">
+            <div class="linkando">
+                <div class="margem">
+                <a href="../index.html" >Introdução</a><br>
+                <a href="variavel.html">Variaveis</a><br>
+                <a href="escrita.html">Escrita</a><br>
+                <a href="operacoes.html">Operações</a><br>
+                <a href="estrutura.html">Estrutura condicional</a><br>
+                <a href="repeticao.html">Repetição</a><br>
+                <a href="outros.html">Outros Conceitos</a><br>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cima">
+            <div class="navbar">
+
+                <button class="menu" id="botao" onclick="ir()">
+                    <span class="barra" id="barra1"></span>
+                    <span class="barra" id="barra2"></span>
+                    <span class="barra" id="barra3"></span>
+                </button> 
+
+                <div class="titulo">Javascript</div>
+
+                <div class="links">
+                    <div class="home"><a href="../index.html">Home</a></div>
+                    <a href="../Navbar/baixar.html">Baixar</a>
+                    <a href="../Navbar/sobre.html">Sobre</a>
+                    <a href="../Navbar/autor.html">Autor</a>
+                </div>
+            </div>
+            <div class="ativador"></div>
+        </div>
+    </div>
+
+    <div class="imagem">
+        <img src="../imagens/index/Javascript-background.jpg" alt="">
+        <div class="invisivel"></div>
+    </div>
+    
+    <div class="linha"></div>
+    
+    <main class="conteudo">
+            <div class="texto">
+                <div class="titulo2"><h1>Outros Conceitos</h1></div>
+                <p>Não existe só “var” para variáveis, existem outras categorias de variáveis e elas vão definir para quando poderão ser usadas e onde poderão ser usadas e isso serve tanto para otimização e também para não acabar causando muita confusão no código. Pra começar existe a categoria chamada variável constante que quando declarada dessa forma seu valor não poderá ser mudado, então ela será sempre uma constante, um belo exemplo seria na própria matemática, as incógnitas são mudáveis, pra cada equação o X terá um valor, agora analisemos o pi (π) ele não é mudável sempre será 3,14...</p>
+                <p>Para declarar constantes em javascript o comando é: const</p>
+                <p>De exemplo:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/const pi.png" alt="">
+                </div>
+                <p>Como visto anteriormente pi se torna uma constante.</p>
+                <br>
+                <p>Temos também o que chamamos de variável global e variável local.</p>
+                <div class="titulos2"><h1>Variável Global e variável Local</h1></div>
+                <p>A variável Global pode ser acessada de qualquer lugar do código sem ser restringida, e também para declarar variáveis globais é o “var”. Agora o “let” ele só pode ser acessado do bloco que ele se encontra, o bloco é como se fosse aqueles locais onde são executados os comandos de loop if e etc...</p>
+                <p>Um exemplo seria:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/var complexa.png" alt="">
+                </div>
+                <p>Nesse caso num é 1 então o resultado do if é true( verdadeiro) então como saída vai ser:</p>
+                <div class="prints">
+                    <img src="../imagens/Linhas de código/Let.png" alt="">
+                </div>
+                <p>E como mostrado ele vai declara uma variável let que de nome possui “nome” e que tem valor “Arthur” (string). Na linha de baixo ele irá imprimir normalmente por eles estão no mesmo bloco (dentro da mesma chave).Fora das chaves/if foi escrito:</p>
+                <p><strong><i>document.write(“Nome é: “+ nome);</i></strong></p>
+                <p><i>Nome é: “Arthur”</i></p>
+                <p>E se colocar para rodar não conseguirá achar a variável pois ela foi declarada dentro das chaves do if e como ela está puxando a variável de fora do if que é onde ela foi declarada então é impossível conseguir chama-la a não ser que ela não fosse um “let” e sim uma “var”.</p>
+        </main>
+</body>
+</html>
